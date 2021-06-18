@@ -1,31 +1,39 @@
-    <link rel="canonical" href="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url }}" />
-    <meta name="referrer" content="origin" />
-    <link rel="next" href="{{ site.baseurl }}page2/" />
+<meta charset="utf-8">
 
-    <meta property="og:site_name" content="{{ site.name }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}" />
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <meta property="og:url" content="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url }}" />
-    <meta property="og:image" content="{{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% else %}assets/images/cover1.jpg{% endif %}" />
+{% include seo.html %}
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}" />
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <meta name="twitter:url" content="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url }}" />
-    <meta name="twitter:image:src" content="{{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% else %}assets/images/cover1.jpg{% endif %}" />
+{% unless site.atom_feed.hide %}
+  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+{% endunless %}
 
-    <script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "Website",
-    "publisher": "{{ site.name }}",
-    "name": "{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}",
-    "url": "{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url }}",
-    "image": "{{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% else %}assets/images/cover1.jpg{% endif %}",
-    "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
-}
-    </script>
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="generator" content="Jekyll 3.0.0" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}feed.xml" />
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+{% if site.head_scripts %}
+  {% for script in site.head_scripts %}
+    <script src="{{ script | relative_url }}"></script>
+  {% endfor %}
+{% endif %}

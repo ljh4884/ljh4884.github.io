@@ -1,125 +1,274 @@
-## Jasper
+# [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
 
-[![Build Status](https://github.com/jekyllt/jasper/actions/workflows/jekyll_build.yml/badge.svg)](https://github.com/jekyllt/jasper/actions/workflows/jekyll_build.yml)
-[![Ruby](https://img.shields.io/badge/ruby-2.6.3-blue.svg?style=flat)](http://travis-ci.org/jekyllt/jasper)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.9.0-blue.svg?style=flat)](http://travis-ci.org/jekyllt/jasper)
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
+[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.7-blue.svg)](https://jekyllrb.com/)
+[![Ruby gem](https://img.shields.io/gem/v/minimal-mistakes-jekyll.svg)](https://rubygems.org/gems/minimal-mistakes-jekyll)
+[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-green.svg?logo=paypal)](https://www.paypal.me/mmistakes)
+[![Donate to this project using Buy Me A Coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/mmistakes)
 
-This is a port of Ghost's default theme [Casper](https://github.com/tryghost/casper) [v1.3.7](https://github.com/TryGhost/Casper/releases/tag/1.3.7) for Jekyll inspired by [Kasper](https://github.com/rosario/kasper).
+Minimal Mistakes is a flexible two-column Jekyll theme, perfect for building personal sites, blogs, and portfolios. As the name implies, styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
-You might well ask at this point why bother making a new Casper's clone?
-Although this is inspired by Kasper, there are several **additional** features which make this port closer
-to the original theme.
+:sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
 
-**New:** Check out **[Jasper2](https://github.com/jekyllt/jasper2)**, a new port of Casper version 2!
+**If you enjoy this theme, please consider sponsoring:**
 
-## Live demo
+[!["Buy Me A Coffee"](https://user-images.githubusercontent.com/1376749/120938564-50c59780-c6e1-11eb-814f-22a0399623c5.png)](https://www.buymeacoffee.com/mmistakes)
+ [![Support via PayPal](https://cdn.jsdelivr.net/gh/twolfson/paypal-github-button@1.0.0/dist/button.svg)](https://www.paypal.me/mmistakes)
 
-[Jasper Live Demo](https://jekyllt.github.io/jasper)
+**Note:** The theme uses the [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin which will need to be installed in your `Gemfile` and added to the `plugins` array of `_config.yml`. Otherwise you'll encounter `Unknown tag 'include_cached'` errors at build.
 
-[Casper's Original Here](https://demo.ghost.io)
+[![Minimal Mistakes live preview][2]][1]
 
+[1]: https://mmistakes.github.io/minimal-mistakes/
+[2]: screenshot.png (live preview)
 
-## Screenshots
+![layout examples](screenshot-layouts.png)
 
-**Home page**
-![home page](https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen1.png)
+## Notable features
 
-**Post page**
-![post page](https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen2.png)
+- Bundled as a "theme gem" for easier installation/upgrading.
+- Compatible with GitHub Pages.
+- Support for Jekyll's built-in Sass/SCSS preprocessor.
+- Nine different skins (color variations).
+- Several responsive layout options (single, archive index, search, splash, and paginated home page).
+- Optimized for search engines with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](http://ogp.me/) data.
+- Optional [header images](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#headers), [custom sidebars](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars), [table of contents](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#table-of-contents), [galleries](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery), related posts, [breadcrumb links](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta), [navigation lists](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#navigation-list), and more.
+- Commenting support (powered by [Disqus](https://disqus.com/), [Facebook](https://developers.facebook.com/docs/plugins/comments), Google+, [Discourse](https://www.discourse.org/), static-based via [Staticman](https://staticman.net/), and [utterances](https://utteranc.es/)).
+- [Google Analytics](https://www.google.com/analytics/) support.
+- UI localized text in English (default), Arabic (عربي), Brazilian Portuguese (Português brasileiro), Catalan, Chinese, Danish, Dutch, Finnish, French (Français), German (Deutsch), Greek, Hebrew, Hindi (हिंदी), Hungarian, Indonesian, Irish (Gaeilge), Italian (Italiano), Japanese, Korean, Malayalam, Myanmar (Burmese), Nepali (Nepalese), Norwegian (Norsk), Persian (فارسی), Polish, Punjabi (ਪੰਜਾਬੀ), Romanian, Russian, Slovak, Spanish (Español), Swedish, Thai, Turkish (Türkçe), and Vietnamese.
 
-**Author page**
-![author page](https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen3.png)
+## Skins (color variations)
 
-**Related posts page**
-![tag page](https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen4.png)
+This theme comes in nine different skins (in addition to the default one).
 
-**Tags page with opened sidebar**
-![sidebar page](https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen5.png)
+| `air` | `contrast` | `dark` |
+| --- | --- | --- |
+| [![air skin](https://mmistakes.github.io/minimal-mistakes/assets/images/air-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/air-skin-archive-large.png) | [![contrast skin](https://mmistakes.github.io/minimal-mistakes/assets/images/contrast-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/contrast-skin-archive-large.png) | [![dark skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dark-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/dark-skin-archive-large.png) |
 
-**404 page**
-![related page](https://raw.githubusercontent.com/jekyllt/jasper/master/assets/images/jasper_screen6.png)
+| `dirt` | `mint` | `sunrise` |
+| --- | --- | --- |
+| [![dirt skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dirt-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/dirt-skin-archive-large.png) | [![mint skin](https://mmistakes.github.io/minimal-mistakes/assets/images/mint-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/mint-skin-archive-large.png) | [![sunrise skin](https://mmistakes.github.io/minimal-mistakes/assets/images/sunrise-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/sunrise-skin-archive-large.png) |
 
-## Jasper theme includes
+| `aqua` | `neon` | `plum` |
+| --- | --- | --- |
+| [![aqua skin](https://mmistakes.github.io/minimal-mistakes/assets/images/aqua-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/aqua-skin-archive-large.png) | [![neon skin](https://mmistakes.github.io/minimal-mistakes/assets/images/neon-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/neon-skin-archive-large.png) | [![plum skin](https://mmistakes.github.io/minimal-mistakes/assets/images/plum-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/plum-skin-archive-large.png) |
 
-* Pagination
-* Google Analytics tracking
-* Author's profile with picture
-* Disqus comments (not Ghost standard)
-* Author page (New 07.02.2015)
-* Tag page(s) (New 07.02.2015)
-* 404 page (New 07.02.2015)
-* Toggleable sliding sidebar (New 07.02.2015)
-* Related posts view (New 30.10.2015)
-* Tag description(s) (New 30.10.2015)
-* Code Syntax Highlight (New 24.11.2015)
-* Code Syntax Highlight with [highlight.js](https://highlightjs.org/) (New 06.04.2016)
-* Rss updated to Jekyll v3 (New 06.04.2016)
-* Updated to Casper v1.3.7 **(New 17.11.2017)**  
-* 'Out of the box' support for Multiple Authors **(New 17.11.2017)**  
+## Demo pages
 
-## How to use it
+| Name                                        | Description                                           |
+| ------------------------------------------- | ----------------------------------------------------- |
+| [Post with Header Image][header-image-post] | A post with a large header image. |
+| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
+| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
+| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
+| [Sample Collection Page][sample-collection] | Single page from a collection. |
+| [Categories Archive][categories-archive] | Posts grouped by category. |
+| [Tags Archive][tags-archive] | Posts grouped by tag. |
 
-### Deployment
+Additional sample posts are available under [posts archive][year-archive] on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs).
 
-There are several alternatives to building and deploying the site:
+[header-image-post]: https://mmistakes.github.io/minimal-mistakes/layout-header-image-text-readability/
+[gallery-post]: https://mmistakes.github.io/minimal-mistakes/post%20formats/post-gallery/
+[html-tags-post]: https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/
+[syntax-post]: https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting/
+[sample-collection]: https://mmistakes.github.io/minimal-mistakes/recipes/chocolate-chip-cookies/
+[categories-archive]: https://mmistakes.github.io/minimal-mistakes/categories/
+[tags-archive]: https://mmistakes.github.io/minimal-mistakes/tags/
+[year-archive]: https://mmistakes.github.io/minimal-mistakes/year-archive/
 
-1. build the site with [GitHub Actions](https://github.com/features/actions) which pushes
-the resulting files (the contents of `_site/` or `../jasper-pages/`)
-to the *gh-pages* branch. This is the approach that is currently used. See
-[jekyll_build.yml](.github/workflows/jekyll_build.yml) for more details.
+## Installation
 
-2. generate the site locally (more details below) and push the resulting
-HTML to a Github repository, that GitHub Pages then host;
+There are three ways to install: as a [gem-based theme](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes), as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) (GitHub Pages compatible), or forking/directly copying all of the theme files into your project.
 
-3. build the site with [travis-ci](https://travis-ci.org/) (with goodies from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis)) automatically pushing the
-generated HTML files to a *gh-pages* branch.
+### Gem-based method
 
-4. deploy the static website with Jekyll-compatible hosters, such as https://www.netlify.com/, that allow for deployment from the Github repo and publish the website using CDNs. Netlify has a free starter offer.
+With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
 
-For option **2)** simply clone this repository (*master branch*), and then run
-`bundle exec jekyll serve` inside the directory. Upload the resulting `_site/` (or `../jasper-pages/`)
-contents to your repository (*master branch* if uploading as your personal page
-(e.g. username.github.io) or *gh-pages branch* if uploading as a project page
-(as for the [demo](https://github.com/jekyllt/jasper/tree/gh-pages)).
+This allows for easier installation and updating as you don't have to manage any of the theme files. To install:
 
-For option **3)** you will need to set up travis-ci for your personal fork. Briefly all you
-need then is to change your details in *[\_config.yml](_config.yml)* so that you can push
-to your github repo. You will also need to generate a secure key to add to your
-*[.travis.yml](.travis.yml)* (you can find more info on how to do it in that file).
-Also make sure you read the documentation from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis). This approach has clear
-advantages in that you simply push your file changes to GitHub and all the HTML files
-are generated for you and pushed to *gh-pages*. Also you get to know if everything is
-still fine with your site builds. Don't hesitate to contact me if you still have any
-issues (see below about issue tracking).
+1. Add the following to your `Gemfile`:
 
-### Author pages
+   ```ruby
+   gem "minimal-mistakes-jekyll"
+   ```
 
-In order to properly generate author pages you need to rename the field *categories* in the front matter of every post to match that of your each author *username* as defined in the *[\_config.yml](_config.yml)* file.
-With the latest update, multiple author blogs are now supported out of the box.
+2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
 
-## Issues and contributing
+   ```bash
+   bundle
+   ```
 
-This install builds well with Ruby v2.6.3 and Jekyll v3.9.0. If you run into any problems please log them on the [issue tracker](https://github.com/jekyllt/jasper/issues).
+3. Set the `theme` in your project's Jekyll `_config.yml` file:
 
-Feel free pull-request your patches and fixes.
+   ```yaml
+   theme: minimal-mistakes-jekyll
+   ```
 
-## Thanks
+To update the theme run `bundle update`.
 
+### Remote theme method
 
-Many thanks to the Ghost team for all the design work that allows to make this clone possible. Also many thanks to all contributors, that help keeping the project alive and updated :smile:
+Remote themes are similar to Gem-based themes, but do not require `Gemfile` changes or whitelisting making them ideal for sites hosted with GitHub Pages.
 
+To install:
 
-## Copyright & License
+1. Create/replace the contents of your `Gemfile` with the following:
 
-Same licence as the one provided by Ghost's team. See Casper's theme [license](GHOST.txt).
+   ```ruby
+   source "https://rubygems.org"
 
-Copyright (C) 2015-2021 - Released under the MIT License.
+   gem "github-pages", group: :jekyll_plugins
+   gem "jekyll-include-cache", group: :jekyll_plugins
+   ```
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+2. Add `jekyll-include-cache` to the `plugins` array of your `_config.yml`.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+3. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+   ```bash
+   bundle
+   ```
+
+4. Add `remote_theme: "mmistakes/minimal-mistakes@4.23.0"` to your `_config.yml` file. Remove any other `theme:` or `remote_theme:` entry.
+
+**Looking for an example?** Use the [Minimal Mistakes remote theme starter](https://github.com/mmistakes/mm-github-pages-starter/generate) for the quickest method of getting a GitHub Pages hosted site up and running. Generate a new repository from the starter, replace sample content with your own, and configure as needed.
+
+## Usage
+
+For detailed instructions on how to configure, customize, add/migrate content, and more read the [theme's documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
+
+---
+
+## Contributing
+
+Found a typo in the documentation or interested in [fixing a bug](https://github.com/mmistakes/minimal-mistakes/issues)? Then by all means [submit an issue](https://github.com/mmistakes/minimal-mistakes/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
+
+For help with using the theme or general Jekyll support questions, please use the [Jekyll Talk forums](https://talk.jekyllrb.com/).
+
+### Pull Requests
+
+When submitting a pull request:
+
+1. Clone the repo.
+2. Create a branch off of `master` and give it a meaningful name (e.g. `my-awesome-new-feature`).
+3. Open a pull request on GitHub and describe the feature or fix.
+
+Theme documentation and demo pages can be found in the [`/docs`](docs) if submitting improvements, typo corrections, etc.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+To test the theme, run `bundle exec rake preview` and open your browser at `http://localhost:4000/test/`. This starts a Jekyll server using content in the `test/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
+
+---
+
+## Credits
+
+### Creator
+
+**Michael Rose**
+
+- <https://mademistakes.com>
+- <https://twitter.com/mmistakes>
+- <https://github.com/mmistakes>
+
+### Icons + Demo Images:
+
+- [The Noun Project](https://thenounproject.com) -- Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
+- [Font Awesome](http://fontawesome.io/)
+- [Unsplash](https://unsplash.com/)
+
+### Other:
+
+- [Jekyll](http://jekyllrb.com/)
+- [jQuery](http://jquery.com/)
+- [Susy](http://susy.oddbird.net/)
+- [Breakpoint](http://breakpoint-sass.com/)
+- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+- [FitVids.JS](http://fitvidsjs.com/)
+- [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav)
+- [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+- [Gumshoe](https://github.com/cferdinandi/gumshoe)
+- [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/)
+- [Lunr](http://lunrjs.com)
+
+---
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2013-2020 Michael Rose and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Minimal Mistakes incorporates icons from [The Noun Project](https://thenounproject.com/) 
+creators Garrett Knoll, Arthur Shlain, and tracy tam.
+Icons are distributed under Creative Commons Attribution 3.0 United States (CC BY 3.0 US).
+
+Minimal Mistakes incorporates [Font Awesome](http://fontawesome.io/),
+Copyright (c) 2017 Dave Gandy.
+Font Awesome is distributed under the terms of the [SIL OFL 1.1](http://scripts.sil.org/OFL) 
+and [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates photographs from [Unsplash](https://unsplash.com).
+
+Minimal Mistakes incorporates [Susy](http://susy.oddbird.net/),
+Copyright (c) 2017, Miriam Eric Suzanne.
+Susy is distributed under the terms of the [BSD 3-clause "New" or "Revised" License](https://opensource.org/licenses/BSD-3-Clause).
+
+Minimal Mistakes incorporates [Breakpoint](http://breakpoint-sass.com/).
+Breakpoint is distributed under the terms of the [MIT/GPL Licenses](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [FitVids.js](https://github.com/davatron5000/FitVids.js/),
+Copyright (c) 2013 Dave Rubert and Chris Coyier.
+FitVids is distributed under the terms of the [WTFPL License](http://www.wtfpl.net/).
+
+Minimal Mistakes incorporates [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/),
+Copyright (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com.
+Magnific Popup is distributed under the terms of the MIT License.
+
+Minimal Mistakes incorporates [Smooth Scroll](http://github.com/cferdinandi/smooth-scroll),
+Copyright (c) 2019 Chris Ferdinandi.
+Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Gumshoejs](http://github.com/cferdinandi/gumshoe),
+Copyright (c) 2019 Chris Ferdinandi.
+Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/),
+Copyright (c) 2010 "Cowboy" Ben Alman.
+jQuery throttle / debounce is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav),
+Copyright (c) 2015 Luke Jackson.
+GreedyNav.js is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Jekyll Group-By-Array](https://github.com/mushishi78/jekyll-group-by-array),
+Copyright (c) 2015 Max White <mushishi78@gmail.com>.
+Jekyll Group-By-Array is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [@allejo's Pure Liquid Jekyll Table of Contents](https://allejo.io/blog/a-jekyll-toc-in-liquid-only/),
+Copyright (c) 2017 Vladimir Jimenez.
+Pure Liquid Jekyll Table of Contents is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Lunr](http://lunrjs.com),
+Copyright (c) 2018 Oliver Nightingale.
+Lunr is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
